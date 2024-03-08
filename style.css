@@ -21,7 +21,13 @@ body {
     background-position: center; /* Vendos pozicionin e imazhit në qendër */
 }
 
-.containe{
+.bol-container{
+ max-width: 1140px;
+ margin: 0 auto;
+ padding: 0 15px;
+}
+
+.container{
     padding: 10px, 10%;
 }
 
@@ -77,8 +83,6 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: 100px;
-    margin-right: 40px;
 }
 .image img{
     width: 500px;
@@ -86,14 +90,21 @@ nav ul li a:hover::after{
 }
 /*about*/
 #about{
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
     color: #ababab;
 }
-.row{
+
+.about.bol-container{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
+
+@media screen and (max-width: 991px){
+    .about.bol-container {
+         flex-direction: column;
+    }
+}
+
 .about-col-1{
     flex-basis: 35%;
 }
@@ -102,9 +113,14 @@ nav ul li a:hover::after{
     height: 500px;
     border-radius: 15px;
 }
+
+@media screen and (min-width: 991px){
+    .about-col-2{
+         margin-left: 20px;
+    }
+}
+
 .about-col-2{
-    margin-right: 5px;
-    margin-left: 5px;
     flex-basis: 60%;
 }
 .sub-title{
@@ -350,11 +366,8 @@ nav .fas{
 .image img{
     display: none;
 }
-#container1{
-    margin-left: 50px;
-}
+
 .header-text{
-    margin-top:50%;
     font-size: 30px;
     margin-right: 200px;
 }
@@ -421,7 +434,8 @@ nav ul .fas{
     padding: 30px;
 }
 #about{
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #ababab;
 }
 #portolio{
